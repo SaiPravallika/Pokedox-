@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pokedex</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="stylesheet.css">
+<script src="Script.js"></script>
+</head>
+<body>
+
+<!-- Place your content here -->
+<div id="searchbox">
+<h1 id="head">Pokédex</h1>
+
+<!--A search box for searching the pokemon by number-->
+
+<label id="searchnum"><b>&nbsp;&nbsp;Pokemon Search-Number:</b></label>
+<input type="text" id="snum" onkeyup="searchbyNum();" name="Search by Number" placeholder="Enter Pokemon Number">
+<input type="submit" id="myBtnNum" onclick="searchbyNum()" value = "Search">
+
+<!--A search box for searching the pokemon by name-->
+
+<div id="search_name">
+<label id="searchname"><b>Pokemon Search-Name:</b></label>
+<input type="text" id="sname" onkeyup="searchbyName();" name="Search by name" placeholder="Enter Pokemon Name">
+<input type="submit" id="myBtnName" onclick="searchbyName()" value="Search">
+</div>
+</div>
+<!--Displaying the pokemon images along with their names and types-->
+<div id="search_results"></div>
+
+<ul id="pokemon_list">
+
+    <li><figure><img id = "1" src="pokemon/1.png" width="225"> <figcaption>#01 <br><span class = "poketext">BULBASAUR </span><br><br><span class ="type1">Grass</span>&nbsp;<span class="type2">Poison</span> </figcaption></figure></li>
+    <li><figure><img id="2" src="pokemon/2.png" width="225"><figcaption>#02 <br><span class = "poketext">IVYSAUR</span><br><br><span class ="type1">Grass</span>&nbsp;<span class="type2">Poison</span></figcaption></figure></li>
+    <!-- <li><figure><img id="3-mega" src="pokemon/3-mega.png" width="225px"><figcaption>#03-mega</figcaption></figure></li>-->
+    <li><figure><img id="3" src="pokemon/3.png" width="225"><figcaption>#03 <br><span class = "poketext">VENUSAUR</span><br><br><span class ="type1">Grass</span>&nbsp;<span class="type2">Poison</span></figcaption></figure></li>
+    <li><figure><img id="4" src="pokemon/4.png" width="225"><figcaption>#04 <br><span class = "poketext">CHARMANDER</span><br><br><span class ="type1">Fire</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="5" src="pokemon/5.png" width="225"><figcaption>#05<br><span class = "poketext">CHARMELEON</span><br><br><span class ="type1">Fire</span>&nbsp;</figcaption></figure></li>
+    <!-- <li><figure><img id="6-mega-x" src="pokemon/6-mega-x.png" width="225px"><figcaption  >#06-mega</figcaption></figure></li>-->
+    <li><figure><img id="6-mega-y" src="pokemon/6-mega-y.png" width="225"><figcaption  >#06 <br><span class = "poketext">CHARIZARD</span><br><br><span class ="type1">Fire</span>&nbsp;<span class ="type2">Flying</span></figcaption></figure></li>
+    <li><figure><img id="7" src="pokemon/7.png" width="225"><figcaption  >#07 <br><span class = "poketext">SQUIRTLE</span><br><br><span class ="class">Water</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="8" src="pokemon/8.png" width="225"><figcaption  >#08 <br><span class = "poketext">WARTORTLE</span><br><br><span class ="type1">Water</span>&nbsp;</figcaption></figure></li>
+    <!-- <li><figure><img id="9-mega" src="pokemon/9-mega.png"width="225px"><figcaption  >#09-mega</figcaption></figure></li>-->
+    <li><figure><img id="9" src="pokemon/9.png" width="225"><figcaption>#09 <br><span class = "poketext">BLASTOISE</span><br><br><span class ="type1">Water</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="10" src="pokemon/10.png" width="225"><figcaption>#010<br><span class = "poketext">CATERPIE</span><br><br><span class ="type1">Bug</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="11" src="pokemon/11.png" width="225"><figcaption  >#011 <br><span class = "poketext">METAPOD</span><br><br><span class ="type1">Bug</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="12" src="pokemon/12.png" width="225"><figcaption  >#012 <br><span class = "poketext">BUTTERFREE</span><br><br><span class ="type1">Bug</span>&nbsp;<span class="type2">Flying</span></figcaption></figure></li>
+    <li><figure><img id="13" src="pokemon/13.png" width="225"><figcaption  >#013<br><span class = "poketext">WEEDLE</span><br><br><span class ="type1">Bug</span>&nbsp;<span class="type2">Poison</span></figcaption></figure></li>
+    <li><figure><img id="14" src="pokemon/14.png" width="225"><figcaption  >#014 <br><span class = "poketext">KAKUNA</span><br><br><span class ="type1">Bug</span>&nbsp;<span class="type2">Poison</span></figcaption></figure></li>
+    <!-- <li><figure><img id="15-mega" src="pokemon/15-mega.png" width="225px"><figcaption  >#015-mega</figcaption></figure></li>-->
+    <li><figure><img id="15" src="pokemon/15.png" width="225"><figcaption  >#015 <br><span class = "poketext">BEEDRILL</span><br><br><span class ="type1">Bug</span>&nbsp;<span class="type2">Poison</span></figcaption></figure></li>
+    <li><figure><img id="16" src="pokemon/16.png" width="225"><figcaption  >#016<br><span class = "poketext">PIDGEY</span><br><br><span class ="type1">Normal</span>&nbsp;<span class="type2">Flying</span></figcaption></figure></li>
+    <li><figure><img id="17" src="pokemon/17.png" width="225"><figcaption  >#017 <br><span class = "poketext">PIDGEOTTO</span><br><br><span class ="type1">Normal</span>&nbsp;<span class="type2">Flying</span></figcaption></figure></li>
+    <!-- <li><figure><img id="18-mega" src="pokemon/18-mega.png" width="225px"><figcaption  >#018-mega</figcaption></figure></li>-->
+    <li><figure><img id="18" src="pokemon/18.png" width="225"><figcaption  >#018 <br><span class = "poketext">PIDGEOT</span><br><br><span class ="type1">Normal</span>&nbsp;<span class="type2">Flying</span></figcaption></figure></li>
+    <li><figure><img id="19" src="pokemon/19.png" width="225"><figcaption  >#019 <br><span class = "poketext">RATTATA</span><br><br><span class ="type1">Normal</span>&nbsp;</figcaption></figure></li>
+    <li><figure><img id="20" src="pokemon/20.png" width="225"><figcaption  >#020 <br><span class = "poketext">RATICATE</span><br><br><span class ="type1">Normal</span>&nbsp;</figcaption></figure></li>
+
+</ul>
+<!--Section for the references which helped to complete the assignment-->
+<div id="references">
+    <h2><b>References</b></h2>
+    <a href="https://www.w3schools.com/html/html_form_input_types.asp">Reference-1</a>&nbsp;
+    <a href="https://www.w3schools.com/html/html_lists_unordered.asp">Reference-2</a>&nbsp;
+    <a href="https://www.w3schools.com/jsref/event_onclick.asp">Reference-3</a>&nbsp;
+    <a href="https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp">Reference-4</a>&nbsp;
+    <a href="https://www.w3schools.com/html/html_images.asp">Reference-5</a>&nbsp;
+    <a href="https://stackoverflow.com/questions/10128950/how-to-write-a-caption-under-an-image">Reference-6</a>&nbsp;
+    <a href="https://www.w3schools.com/howto/howto_js_filter_lists.asp">Reference-7</a>&nbsp;
+    <a href="https://www.w3schools.com/css/css_inline-block.asp">Reference-8</a>&nbsp;
+    <a href="http://www-db.deis.unibo.it/courses/TW/DOCS/w3schools/jsref/event_onkeyup.asp.html">Reference-9</a>&nbsp;
+    
+</div>
+</body>
+</html>

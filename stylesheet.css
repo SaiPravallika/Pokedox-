@@ -1,0 +1,78 @@
+#head
+{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: xx-large;
+  font-stretch: ultra-expanded;
+}
+figcaption
+{
+  text-align: center;
+  color: whitesmoke;
+}
+.poketext
+{
+  text-decoration: underline;
+  text-transform: capitalize;
+  color: whitesmoke;
+  font-stretch: ultra-expanded;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.type1
+{
+  display: inline; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px; 
+  border-radius:10px; 
+  background-color: rgb(123, 204, 123);
+}
+.type2
+{
+  display: inline; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px; 
+  border-radius:10px; 
+  background-color: rgb(247, 86, 86);
+}
+#snum
+{
+  border-radius:5px; 
+  width:200px;
+  height:30px;
+}
+#sname
+{
+  border-radius:5px;
+  width:200px;
+  height:30px;
+}
+#search_name
+{
+  float:right;
+}
+
+
+ul {
+    list-style-type: none;
+    margin:5px;
+    padding-bottom: 10px;
+    overflow: hidden;
+   
+  }
+
+  li {
+    list-style-type: none;
+    float:left;
+    margin: 10px;
+    width: 320px;
+    padding-bottom: 10px;
+    background-color: rgb(54, 52, 50);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
